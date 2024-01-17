@@ -1,4 +1,5 @@
 const axios = require('axios');
+const localStorageAction = require('../config/localStorageAction');
 
 const spotifyToken = async (req,res) => {
 
@@ -20,7 +21,7 @@ const spotifyToken = async (req,res) => {
 
   try {
     const response = await axios(request);
-    res.json(response.data);
+    localStorageAction('token', response.data.access_token);
   }
 
   catch (error) {
