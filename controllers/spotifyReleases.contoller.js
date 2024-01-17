@@ -1,13 +1,13 @@
 const axios = require('axios');
 const localStorageAction = require('../config/localStorageAction');
 
-const spotifyGenres = async (req,res) => {
+const spotifyReleases = async (req,res) => {
 
   const token = localStorageAction('token');
 
   const request = {
     method: 'get',
-    url: 'https://api.spotify.com/v1/recommendations/available-genre-seeds',
+    url: 'https://api.spotify.com/v1/browse/new-releases',
     headers: {
       'Authorization': 'Bearer ' + token
     }
@@ -23,4 +23,4 @@ const spotifyGenres = async (req,res) => {
   }
 }
 
-module.exports = spotifyGenres;
+module.exports = spotifyReleases;

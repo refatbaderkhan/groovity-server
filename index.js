@@ -14,7 +14,6 @@ app.listen(8000, (err) => {
     throw err;
   }
   spotifyToken();
-  setInterval(spotifyToken, 3600000);
   console.log('Server started on port 8000');
 });
 
