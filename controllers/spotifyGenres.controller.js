@@ -1,7 +1,7 @@
 const axios = require('axios');
 const localStorageAction = require('../config/localStorageAction');
 
-const spotifyGenres = async (req,res) => {
+const spotifyAvailableGenreSeeds = async (req,res) => {
 
   const token = localStorageAction('token');
 
@@ -23,4 +23,4 @@ const spotifyGenres = async (req,res) => {
   }
 }
 
-module.exports = spotifyGenres;
+module.exports = spotifyAvailableGenreSeeds;
