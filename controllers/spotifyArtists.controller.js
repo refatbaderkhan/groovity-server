@@ -26,4 +26,29 @@ const spotifyGetArtist = async (req,res) => {
 }
 
 
-module.exports = {spotifyGetArtist};
+const spotifyGetSeveralArtists = async (req,res) => {
+
+  const token = localStorageAction('token');
+  const artist_ids = req.params.artist_ids;
+
+  const request = {
+    method: 'get',
+    url: `https://api.spotify.com/v1/artists?ids=${artist_ids}`,
+    headers: {
+      'Authorization': 'Bearer ' + token
+    } 
+  };
+
+  try {
+    const response = await axios(request);
+    res.json(response.data);
+  }
+
+  catch (error) {
+    console.log(error);
+  }
+}
+
+
+module.exports = {spotifyGetArtist, 
+                  spotifyGetSeveralArtists};
