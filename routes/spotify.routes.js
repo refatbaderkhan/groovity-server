@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const spotifyNewReleases = require('../controllers/spotifyAlbums.contoller')
+const {spotifyGetAlbum, spotifyNewReleases} = require('../controllers/spotifyAlbums.contoller')
 const {spotifySeveralBrowseCategories, spotifySingleBrowseCategory} = require('../controllers/spotifyCategories.controller')
 const spotifyAvailableGenreSeeds = require('../controllers/spotifyGenres.controller')
 const {spotifyGetPlaylist, spotifyFeaturedPlaylists, spotifyCategoryPlaylists} = require('../controllers/spotifyPlaylists.controller')
 
+router.get('/get-album/:album_id', spotifyGetAlbum);
 router.get('/new-releases', spotifyNewReleases);
 
 router.get('/several-browse-categories', spotifySeveralBrowseCategories)
