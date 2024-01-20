@@ -26,6 +26,7 @@ const {spotifyGetPlaylist,
       } = require('../controllers/spotifyPlaylists.controller')
 
 const {spotifyGetTrack,
+       spotifyGetSeveralTracks
       } = require('../controllers/spotifyTracks.controller')
 
 
@@ -51,5 +52,6 @@ router.get('/featured-playlists', spotifyFeaturedPlaylists);
 router.get('/category-playlists/:category_id', spotifyCategoryPlaylists);
 
 router.get('/get-track/:track_id', spotifyGetTrack);
+router.get('/get-several-tracks/:track_ids', spotifyGetSeveralTracks);
 
 module.exports = router;
