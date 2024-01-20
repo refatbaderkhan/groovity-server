@@ -18,7 +18,8 @@ const {spotifySeveralBrowseCategories,
        spotifySingleBrowseCategory
       } = require('../controllers/spotifyCategories.controller')
 
-const spotifyAvailableGenreSeeds = require('../controllers/spotifyGenres.controller')
+const spotifyAvailableGenreSeeds 
+        = require('../controllers/spotifyGenres.controller')
 
 const {spotifyGetPlaylist, 
        spotifyFeaturedPlaylists, 
@@ -31,7 +32,6 @@ const {spotifyGetTrack,
        spotifyGetTrackAudioAnalysis,
        spotifyGetTracksRecommendations
       } = require('../controllers/spotifyTracks.controller')
-
 
 
 router.get('/get-album/:album_id', spotifyGetAlbum);
@@ -59,5 +59,6 @@ router.get('/get-several-tracks/:track_ids', spotifyGetSeveralTracks);
 router.get('/get-track-audio-features/:track_id', SpotifygetTrackAudioFeatures);
 router.get('/get-track-audio-analysis/:track_id', spotifyGetTrackAudioAnalysis);
 router.get('/get-tracks-recommendations/:seed_artists/:seed_genres/:seed_tracks', spotifyGetTracksRecommendations);
+
 
 module.exports = router;

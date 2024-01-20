@@ -1,6 +1,7 @@
 const axios = require('axios');
 const localStorageAction = require('../config/localStorageAction');
 
+
 const spotifySeveralBrowseCategories = async (req,res) => {
 
   const token = localStorageAction('token');
@@ -22,6 +23,7 @@ const spotifySeveralBrowseCategories = async (req,res) => {
     console.log(error);
   }
 }
+
 
 const spotifySingleBrowseCategory = async (req,res) => {
   
@@ -46,4 +48,6 @@ const spotifySingleBrowseCategory = async (req,res) => {
   }
 
 
-module.exports = {spotifySeveralBrowseCategories, spotifySingleBrowseCategory};
+module.exports = {spotifySeveralBrowseCategories, 
+                  spotifySingleBrowseCategory
+                };

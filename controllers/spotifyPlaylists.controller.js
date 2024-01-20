@@ -72,6 +72,7 @@ const spotifyCategoryPlaylists = async (req,res) => {
   } 
 }
 
+
 module.exports = {spotifyGetPlaylist,
                   spotifyFeaturedPlaylists, 
                   spotifyCategoryPlaylists

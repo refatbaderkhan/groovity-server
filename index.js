@@ -5,7 +5,6 @@ const spotifyToken = require('./controllers/spotifyToken.controller')
 
 app.use(cors());
 
-
 const spotifyRouter = require("./routes/spotify.routes")
 app.use("/spotify", spotifyRouter)
 

@@ -1,6 +1,7 @@
 const axios = require('axios');
 const localStorageAction = require('../config/localStorageAction');
-const { clientId, ClientSecret, clientSecret} = require('../spotifyClient');
+const { clientId, clientSecret} = require('../spotifyClient');
+
 
 const spotifyToken = async (req,res) => {
 
@@ -29,5 +30,6 @@ const spotifyToken = async (req,res) => {
     console.log(error);
   }
 }
+
 
 module.exports = spotifyToken;
