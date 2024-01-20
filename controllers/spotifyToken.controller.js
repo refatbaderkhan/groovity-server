@@ -1,10 +1,11 @@
 const axios = require('axios');
 const localStorageAction = require('../config/localStorageAction');
+const { clientId, ClientSecret, clientSecret} = require('../spotifyClient');
 
 const spotifyToken = async (req,res) => {
 
-  const client_id = 'f1a7e67eeb814f1289f25caae9ed44a7';
-  const client_secret = '31c7635953b14e1db09d4cde9a058901';
+  const client_id = clientId;
+  const client_secret = clientSecret;
 
   const data = new URLSearchParams();
   data.append('grant_type', 'client_credentials');

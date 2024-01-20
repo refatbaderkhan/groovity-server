@@ -1,6 +1,7 @@
 const axios = require('axios');
 const localStorageAction = require('../config/localStorageAction');
 
+
 const spotifyGetPlaylist = async (req,res) => {
 
   const token = localStorageAction('token');
@@ -23,8 +24,6 @@ const spotifyGetPlaylist = async (req,res) => {
     console.log(error);
   }
 }
-
-  
 
 
 const spotifyFeaturedPlaylists = async (req,res) => {
@@ -49,6 +48,7 @@ const spotifyFeaturedPlaylists = async (req,res) => {
   } 
 }
 
+
 const spotifyCategoryPlaylists = async (req,res) => {
 
   const token = localStorageAction('token');
@@ -72,4 +72,7 @@ const spotifyCategoryPlaylists = async (req,res) => {
   } 
 }
 
-module.exports = {spotifyGetPlaylist, spotifyFeaturedPlaylists, spotifyCategoryPlaylists}
+module.exports = {spotifyGetPlaylist,
+                  spotifyFeaturedPlaylists, 
+                  spotifyCategoryPlaylists
+                }
