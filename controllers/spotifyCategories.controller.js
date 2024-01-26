@@ -8,7 +8,7 @@ const spotifySeveralBrowseCategories = async (req,res) => {
 
   const request = {
     method: 'get',
-    url: 'https://api.spotify.com/v1/browse/categories',
+    url: 'https://api.spotify.com/v1/browse/categories/?limit=50',
     headers: {
       'Authorization': 'Bearer ' + token
     }
