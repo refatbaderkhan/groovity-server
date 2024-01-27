@@ -56,7 +56,7 @@ const spotifyCategoryPlaylists = async (req,res) => {
 
   const request = {
     method: 'get',
-    url: `https://api.spotify.com/v1/browse/categories/${category_id}/playlists`,
+    url: `https://api.spotify.com/v1/browse/categories/${category_id}/playlists/?limit=50`,
     headers: {
       'Authorization': 'Bearer ' + token
     }
